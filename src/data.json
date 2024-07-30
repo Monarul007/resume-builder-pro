@@ -1,0 +1,748 @@
+{
+    "id": 5,
+    "userID": 1,
+    "templateID": 48,
+    "templateColor": "#850054",
+    "job_industry": 1,
+    "job_department": 1,
+    "title": "My Resume",
+    "job_title": "Software Development",
+    "job_title_id": 2,
+    "sections": [
+        {
+            "id": 1,
+            "type": "personal",
+            "name": "Personal Details",
+            "status": 1,
+            "order": 1
+        },
+        {
+            "id": 2,
+            "type": "profile",
+            "name": "Professional Summary",
+            "status": 1,
+            "order": 2
+        },
+        {
+            "id": 3,
+            "type": "experience",
+            "name": "Employment History",
+            "status": 1,
+            "order": 3
+        },
+        {
+            "id": 4,
+            "type": "education",
+            "name": "Education",
+            "status": 1,
+            "order": 4
+        },
+        {
+            "id": 5,
+            "type": "expertise",
+            "name": "Expertise's",
+            "status": 1,
+            "order": 5
+        },
+        {
+            "id": 6,
+            "type": "reference",
+            "name": "References",
+            "status": 1,
+            "order": 6
+        },
+        {
+            "id": 7,
+            "type": "language",
+            "name": "Languages",
+            "status": 1,
+            "order": 7
+        },
+        {
+            "id": 8,
+            "type": "course",
+            "name": "Courses",
+            "status": 0,
+            "order": 8
+        },
+        {
+            "id": 9,
+            "type": "internship",
+            "name": "internships",
+            "status": 0,
+            "order": 9
+        },
+        {
+            "id": 10,
+            "type": "hobby",
+            "name": "Hobbies",
+            "status": 0,
+            "order": 10
+        },
+        {
+            "id": 11,
+            "type": "activity",
+            "name": "Extra-Curricular Activities",
+            "status": 0,
+            "order": 11
+        },
+        {
+            "id": 12,
+            "type": "tool",
+            "name": "Tools",
+            "status": 0,
+            "order": 12
+        }
+    ],
+    "section_names": null,
+    "section_orders": null,
+    "created_at": "2024-07-29T12:36:31.000000Z",
+    "updated_at": "2024-07-29T13:11:00.000000Z",
+    "job_industries": [
+        {
+            "id": 1,
+            "title": "Information Technology (IT) and Software Development",
+            "description": "Information Technology (IT) and Software Development",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "title": "Manufacturing",
+            "description": "Manufacturing",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "title": "Finance and Banking",
+            "description": "Finance and Banking",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 4,
+            "title": "Healthcare and Pharmaceuticals",
+            "description": "Healthcare and Pharmaceuticals",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 5,
+            "title": "Telecommunications",
+            "description": "Telecommunications",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 6,
+            "title": "Retail and Consumer Goods",
+            "description": "Retail and Consumer Goods",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 7,
+            "title": "Tourism and Hospitality",
+            "description": "Tourism and Hospitality",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 8,
+            "title": "Education",
+            "description": "Education",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 9,
+            "title": "Construction and Real Estate",
+            "description": "Construction and Real Estate",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 10,
+            "title": "Agriculture and Agribusiness",
+            "description": "Agriculture and Agribusiness",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "job_departments": [
+        {
+            "id": 1,
+            "industryID": null,
+            "title": "Software Development",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "industryID": null,
+            "title": "IT Support and Services",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "industryID": null,
+            "title": "Network and Infrastructure",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 4,
+            "industryID": null,
+            "title": "Cybersecurity",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 5,
+            "industryID": null,
+            "title": "Project Management",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 6,
+            "industryID": null,
+            "title": "Quality Assurance (QA) and Testing",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 7,
+            "industryID": null,
+            "title": "Research and Development (R&D)",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 8,
+            "industryID": null,
+            "title": "Customer Relationship Management (CRM)",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 9,
+            "industryID": null,
+            "title": "Data Analysis and Business Intelligence",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 10,
+            "industryID": null,
+            "title": "Production and Operations",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 11,
+            "industryID": null,
+            "title": "Quality Control",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 12,
+            "industryID": null,
+            "title": "Supply Chain Management",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 13,
+            "industryID": null,
+            "title": "Procurement and Inventory Management",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 14,
+            "industryID": null,
+            "title": "Maintenance and Engineering",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 15,
+            "industryID": null,
+            "title": "Health and Safety",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 16,
+            "industryID": null,
+            "title": "Human Resources (HR)",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 17,
+            "industryID": null,
+            "title": "Retail Banking",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 18,
+            "industryID": null,
+            "title": "Corporate Banking",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 19,
+            "industryID": null,
+            "title": "Investment Banking",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 20,
+            "industryID": null,
+            "title": "Risk Management",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 21,
+            "industryID": null,
+            "title": "Compliance and Legal",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 22,
+            "industryID": null,
+            "title": "Treasury and Cash Management",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 23,
+            "industryID": null,
+            "title": "Clinical Operations",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 24,
+            "industryID": null,
+            "title": "Sales and Marketing",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 25,
+            "industryID": null,
+            "title": "Manufacturing and Production",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 26,
+            "industryID": null,
+            "title": "Medical Affairs",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 27,
+            "industryID": null,
+            "title": "Network Operations",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 28,
+            "industryID": null,
+            "title": "IT and Infrastructure",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 29,
+            "industryID": null,
+            "title": "Customer Service and Support",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 30,
+            "industryID": null,
+            "title": "E-commerce and Online Retail",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 31,
+            "industryID": null,
+            "title": "Front Office and Guest Services",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 32,
+            "industryID": null,
+            "title": "Housekeeping",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 33,
+            "industryID": null,
+            "title": "Food and Beverage",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 34,
+            "industryID": null,
+            "title": "Travel and Tour Operations",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 35,
+            "industryID": null,
+            "title": "Admissions and Enrollment",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 36,
+            "industryID": null,
+            "title": "Administration",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 37,
+            "industryID": null,
+            "title": "Real Estate Management",
+            "description": null,
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "eligibility_state": "new",
+    "user": {
+        "id": 1,
+        "name": "Monarul Islam",
+        "username": "monarul007",
+        "email": "monarul@coder71.com",
+        "firstName": "Monarul",
+        "lastName": "Islam",
+        "phone": "01782833296",
+        "provider": null,
+        "provider_id": null,
+        "email_verified_at": "2024-07-25T19:17:52.000000Z",
+        "nationality": "Bangladeshi",
+        "country": "Bangladesh",
+        "created_at": "2024-07-25T19:17:52.000000Z",
+        "updated_at": "2024-07-25T19:17:52.000000Z",
+        "info": {
+            "id": 1,
+            "userID": 1,
+            "avatar": "uploads/avatars/avatar_66a7949753a0e.png",
+            "about": null,
+            "address": "184 Mavis Mountain\nGoodwinshire, WI 76338-8932",
+            "website": "http://collier.com/dolorem-corporis-nam-facilis-sapiente-qui",
+            "github": "http://howe.com/sit-itaque-rem-fugit.html",
+            "linkedin": "http://dibbert.net/modi-tempora-voluptatum-autem-et-dolore",
+            "twitter": "http://www.johns.net/dignissimos-quas-odio-voluptatem-et-facere-expedita-nostrum",
+            "facebook": "http://cremin.com/in-nostrum-asperiores-inventore-dolore-aut-dignissimos-rem",
+            "instagram": "http://www.mann.info/voluptas-ut-autem-tenetur-et-in-modi-aperiam-incidunt",
+            "youtube": null,
+            "skype": null,
+            "behance": null,
+            "dribbble": null,
+            "snapchat": null,
+            "pinterest": null,
+            "tumblr": null,
+            "reddit": null,
+            "flickr": null,
+            "vimeo": null,
+            "digg": null,
+            "medium": null,
+            "foursquare": null,
+            "quora": null,
+            "discord": null,
+            "created_at": "2024-07-25T19:17:52.000000Z",
+            "updated_at": "2024-07-29T13:09:43.000000Z"
+        }
+    },
+    "professional_summary": {
+        "id": 5,
+        "userID": 1,
+        "resumeID": 5,
+        "content": "<p>To leverage my 5+ years of experience in PHP web development to create and maintain high-quality, innovative websites for a leading organization. “Eager to join an established company as a PHP Web Developer where I can use my expertise in developing robust web applications using popular frameworks such as Laravel and Symfony.”</p>",
+        "userImage": null,
+        "created_at": "2024-07-29T12:36:32.000000Z",
+        "updated_at": "2024-07-29T12:42:58.000000Z"
+    },
+    "hobbies": {
+        "id": 5,
+        "resumeID": 5,
+        "content": null,
+        "created_at": "2024-07-29T12:36:32.000000Z",
+        "updated_at": "2024-07-29T12:36:32.000000Z"
+    },
+    "template": {
+        "id": 48,
+        "title": "Creative 5",
+        "type": "resume",
+        "tcat_id": 1,
+        "templateName": "Resume4",
+        "templatePath": "js/Components/ResumeTemplates/Resume4.jsx",
+        "description": "Blue, Red",
+        "featured": 1,
+        "status": 1,
+        "sort_order": 5,
+        "created_at": "2024-07-29T02:14:47.000000Z",
+        "updated_at": "2024-07-29T02:14:47.000000Z",
+        "colors": [
+            {
+                "id": 81,
+                "title": "Red",
+                "template_id": 48,
+                "color": "#bd0000",
+                "previewImage": "uploads/colors/color_66a787b7d4ae8.png",
+                "description": null,
+                "isDefault": 0,
+                "status": 1,
+                "sort_order": null,
+                "created_at": "2024-07-29T02:14:48.000000Z",
+                "updated_at": "2024-07-29T02:14:48.000000Z"
+            },
+            {
+                "id": 82,
+                "title": "Blue",
+                "template_id": 48,
+                "color": "#004cff",
+                "previewImage": "uploads/colors/color_66a787b85d42f.png",
+                "description": null,
+                "isDefault": 0,
+                "status": 1,
+                "sort_order": null,
+                "created_at": "2024-07-29T02:14:48.000000Z",
+                "updated_at": "2024-07-29T02:14:48.000000Z"
+            }
+        ]
+    },
+    "social_links": [
+        {
+            "id": 1,
+            "resumeID": 5,
+            "label": "Facebook",
+            "link": "https://facebook.com/username",
+            "sort_order": 0,
+            "created_at": "2024-07-29T12:40:38.000000Z",
+            "updated_at": "2024-07-29T12:40:38.000000Z"
+        },
+        {
+            "id": 2,
+            "resumeID": 5,
+            "label": "Twitter",
+            "link": "https://twitter.com/username",
+            "sort_order": 1,
+            "created_at": "2024-07-29T12:40:38.000000Z",
+            "updated_at": "2024-07-29T12:40:38.000000Z"
+        },
+        {
+            "id": 3,
+            "resumeID": 5,
+            "label": "LinkedIn",
+            "link": "https://linkedin.com/username",
+            "sort_order": 2,
+            "created_at": "2024-07-29T12:40:38.000000Z",
+            "updated_at": "2024-07-29T12:40:38.000000Z"
+        },
+        {
+            "id": 4,
+            "resumeID": 5,
+            "label": "Github",
+            "link": "https://github.com/username",
+            "sort_order": 3,
+            "created_at": "2024-07-29T12:40:38.000000Z",
+            "updated_at": "2024-07-29T12:40:38.000000Z"
+        },
+        {
+            "id": 5,
+            "resumeID": 5,
+            "label": "Instagram",
+            "link": "https://instagram.com/username",
+            "sort_order": 4,
+            "created_at": "2024-07-29T12:40:38.000000Z",
+            "updated_at": "2024-07-29T12:40:38.000000Z"
+        }
+    ],
+    "skills": [
+        {
+            "id": 2,
+            "resumeID": 5,
+            "skill": "Figma",
+            "level": "Beginner",
+            "sort_order": 0,
+            "showLebel": null,
+            "created_at": "2024-07-29T12:49:59.000000Z",
+            "updated_at": "2024-07-29T12:49:59.000000Z"
+        },
+        {
+            "id": 3,
+            "resumeID": 5,
+            "skill": "HTML",
+            "level": "Experienced",
+            "sort_order": 1,
+            "showLebel": null,
+            "created_at": "2024-07-29T12:49:59.000000Z",
+            "updated_at": "2024-07-29T12:49:59.000000Z"
+        },
+        {
+            "id": 4,
+            "resumeID": 5,
+            "skill": "CSS3",
+            "level": "Experienced",
+            "sort_order": 2,
+            "showLebel": null,
+            "created_at": "2024-07-29T12:49:59.000000Z",
+            "updated_at": "2024-07-29T12:49:59.000000Z"
+        }
+    ],
+    "languages": [
+        {
+            "id": 1,
+            "resumeID": 5,
+            "language": "Bengali",
+            "level": "Native Speaker",
+            "sort_order": 0,
+            "showLevel": null,
+            "created_at": "2024-07-29T12:52:41.000000Z",
+            "updated_at": "2024-07-29T12:52:41.000000Z"
+        },
+        {
+            "id": 2,
+            "resumeID": 5,
+            "language": "English",
+            "level": "Native Speaker",
+            "sort_order": 1,
+            "showLevel": null,
+            "created_at": "2024-07-29T12:52:41.000000Z",
+            "updated_at": "2024-07-29T12:52:41.000000Z"
+        }
+    ],
+    "experiences": [
+        {
+            "id": 2,
+            "resumeID": 5,
+            "jobTitle": "Software Developer",
+            "employer": "Google",
+            "employer_url": null,
+            "startDate": "2024-07",
+            "endDate": "2024-07",
+            "isCurrent": 1,
+            "city": "Mirpoor 1, Dhaka -1216",
+            "description": "<ul><li>“Seeking an opportunity to utilize my skills in HTML, CSS, JavaScript, and PHP to develop dynamic websites with innovative solutions.”</li><li>“Experienced Web Developer looking to leverage my expertise in HTML/CSS/JavaScript/PHP to create custom applications for clients.”</li><li>“To leverage my 5+ years of experience in PHP web development to create and maintain high-quality, innovative websites for a leading organization.”</li><li>“Seeking a challenging and rewarding position as a PHP Web Developer where I can utilize my technical skills and knowledge to contribute to the growth of the company.”</li></ul>",
+            "sort_order": 0,
+            "created_at": "2024-07-29T12:42:58.000000Z",
+            "updated_at": "2024-07-29T12:46:30.000000Z"
+        },
+        {
+            "id": 4,
+            "resumeID": 5,
+            "jobTitle": "Experienced Web Developer",
+            "employer": "Facebook",
+            "employer_url": null,
+            "startDate": "2024-07",
+            "endDate": "2024-07",
+            "isCurrent": 0,
+            "city": "Mirpoor 1, Dhaka -1216",
+            "description": "<ul><li>“Seeking employment as a PHP Web Developer where I can utilize my knowledge of programming languages and frameworks such as HTML5, CSS3, JavaScript, jQuery, AJAX, MySQL, etc., to develop high-quality websites.”</li><li>“To join an organization as a PHP Web Developer where I can employ my problem-solving skills and attention to detail while working on complex projects.”</li><li>“Eager to join an established company as a PHP Web Developer where I can use my expertise in developing robust web applications using popular frameworks such as Laravel and Symfony.</li></ul>",
+            "sort_order": 1,
+            "created_at": "2024-07-29T12:44:42.000000Z",
+            "updated_at": "2024-07-29T12:45:17.000000Z"
+        }
+    ],
+    "educations": [
+        {
+            "id": 1,
+            "resumeId": 5,
+            "school": "National University",
+            "location": "Mirpoor 1, Dhaka -1216",
+            "degree": "Bachelor of Science",
+            "fieldOfStudy": "Not Specified",
+            "grade": "3.0",
+            "startDate": "2024-07",
+            "endDate": "2024-07",
+            "isCurrent": 0,
+            "description": "<p>Sure! Here are some examples of career objectives for a PHP Web Developer: Do any of these resonate with your career aspirations? Or would you like to customize one further? These objectives can help you tailor your resume to highlight your skills and goals.</p>",
+            "sort_order": 0,
+            "created_at": "2024-07-29T12:47:20.000000Z",
+            "updated_at": "2024-07-29T12:51:11.000000Z"
+        }
+    ],
+    "references": [
+        {
+            "id": 2,
+            "resumeID": 5,
+            "ref_name": "ABC NAme",
+            "position": "Managing Director",
+            "company": "ABC Company",
+            "phone": "01782833296",
+            "email": "monarul@coder71.com",
+            "website": null,
+            "sort_order": 0,
+            "created_at": "2024-07-29T12:51:11.000000Z",
+            "updated_at": "2024-07-29T12:51:11.000000Z"
+        }
+    ],
+    "courses": [],
+    "internships": [],
+    "activities": [],
+    "tools": [],
+    "custom_sections": [],
+    "selectedTemplate": "template48"
+}
