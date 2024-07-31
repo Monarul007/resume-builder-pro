@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -14,10 +14,59 @@ import defaultData from "./data.json";
 import Resume2 from './components/templates/Resume2';
 import "./App.css"
 
+import { useResizeObserver } from '@wojtekmaj/react-hooks';
+import { pdfjs, Document, Page } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
+
+import './Sample.css';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
+
+const options = {
+  cMapUrl: '/cmaps/',
+  standardFontDataUrl: '/standard_fonts/',
+};
+
+const resizeObserverOptions = {};
+const maxWidth = 800;
+
 const App = () => {
   const methods = useForm({ defaultValues: defaultData });
   const [formData, setFormData] = useState(methods.getValues());
   const previewRef = useRef();
+
+  const [file, setFile] = useState('./sample.pdf');
+  const [numPages, setNumPages] = useState();
+  const [containerRef, setContainerRef] = useState(null);
+  const [containerWidth, setContainerWidth] = useState();
+
+  const onResize = useCallback((entries) => {
+    const [entry] = entries;
+
+    if (entry) {
+      setContainerWidth(entry.contentRect.width);
+    }
+  }, []);
+
+  useResizeObserver(containerRef, resizeObserverOptions, onResize);
+
+  function onFileChange(event) {
+    const { files } = event.target;
+
+    const nextFile = files?.[0];
+
+    if (nextFile) {
+      setFile(nextFile);
+    }
+  }
+
+  function onDocumentLoadSuccess({ numPages: nextNumPages }) {
+    setNumPages(nextNumPages);
+  }
 
   useEffect(() => {
     const subscription = methods.watch((value) => {
@@ -26,52 +75,42 @@ const App = () => {
     return () => subscription.unsubscribe();
   }, [methods]);
 
-  const handleGeneratePDF = async () => {
-    const element = previewRef.current;
-    const a4Width = 210;
-    const a4Height = 297;
-    const scale = 2; // Increase if needed
+  // const handleGeneratePDF = async () => {
+  //   const element = previewRef.current;
+  //   if (element) {
 
-    const canvas = await html2canvas(element, { scale });
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new jsPDF({
-      orientation: 'portrait',
-      unit: 'mm',
-      format: 'a4',
-    });
+  //     const opt = {
+  //       margin: 0,
+  //       padding: [0],
+  //       filename: `${userData?.title}.pdf`,
+  //       image: { type: 'jpeg', quality: 1 },
+  //       html2canvas: { dpi: 192, scale:4, letterRendering: true, useCORS: true, scrollY: -window.scrollY, scrollX: 0, allowTaint: true, logging: true},
+  //       jsPDF: { unit: "mm", format: "a4", orientation: "portrait", putTotalPages: true },
+  //     };
 
-    const imgProps = pdf.getImageProperties(imgData);
-    const pdfWidth = a4Width;
-    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-    const totalPages = Math.ceil(pdfHeight / a4Height);
+  //     try {
+  //       const pdf = await html2pdf().set(opt).from(element).toPdf().get('pdf');
 
-    for (let i = 0; i < totalPages; i++) {
-      const pageHeight = a4Height * i;
-      const srcImg = canvas;
-      const sX = 0;
-      const sY = pageHeight;
-      const sWidth = canvas.width;
-      const sHeight = a4Height * scale;
-      const dX = 0;
-      const dY = 0;
-      const dWidth = pdfWidth;
-      const dHeight = a4Height;
+  //       const pdfBlob = pdf.output('blob');
 
-      const singlePageCanvas = document.createElement('canvas');
-      singlePageCanvas.setAttribute('width', `${sWidth}`);
-      singlePageCanvas.setAttribute('height', `${sHeight}`);
-      const ctx = singlePageCanvas.getContext('2d');
-      ctx.drawImage(srcImg, sX, sY, sWidth, sHeight, dX, dY, dWidth, dHeight);
+  //       const pdfDoc = await pdfjs.getDocument(URL.createObjectURL(pdfBlob)).promise;
+  //       const numPages = pdfDoc.numPages;
+  //       await setNumberOfPages(numPages);
 
-      const singlePageDataURL = singlePageCanvas.toDataURL('image/png');
-      if (i > 0) {
-        pdf.addPage();
-      }
-      pdf.addImage(singlePageDataURL, 'PNG', 0, 0, pdfWidth, pdfHeight);
-    }
+  //       const imagePromises = [];
+  //       for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
+  //         imagePromises.push(renderPageToImage(pdfDoc, pageNumber));
+  //       }
 
-    pdf.save('resume.pdf');
-  };
+  //       const images = await Promise.all(imagePromises);
+  //       setImages(images);
+  //     } catch (error) {
+  //       console.error('Error generating PDF:', error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   }
+  // };
 
   return (
     <div className="flex">
@@ -101,16 +140,38 @@ const App = () => {
         </form>
       </FormProvider>
 
-      <div className="w-1/2 p-4 border-l-2 border-gray-200">
+      <div className="w-2/3 p-4 border-l-2 border-gray-200">
         <div ref={previewRef}>
-          <Resume2 userData={formData} numberOfPages={2} />
+          {/* <Resume2 userData={formData} numberOfPages={2} /> */}
+          <div className="Example">
+            <header>
+              <h1>react-pdf sample page</h1>
+            </header>
+            <div className="Example__container">
+              <div className="Example__container__load">
+                <label htmlFor="file">Load from file:</label>{' '}
+                <input onChange={onFileChange} type="file" />
+              </div>
+              <div className="Example__container__document" ref={setContainerRef}>
+                <Document file={file} onLoadSuccess={onDocumentLoadSuccess} options={options}>
+                  {Array.from(new Array(numPages), (el, index) => (
+                    <Page
+                      key={`page_${index + 1}`}
+                      pageNumber={index + 1}
+                      width={containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth}
+                    />
+                  ))}
+                </Document>
+              </div>
+            </div>
+          </div>
         </div>
-        <button
+        {/* <button
           onClick={handleGeneratePDF}
           className="mt-4 bg-green-500 text-white py-2 px-4 rounded"
         >
           Download as PDF
-        </button>
+        </button> */}
       </div>
     </div>
   );
