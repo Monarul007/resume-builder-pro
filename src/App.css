@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    img {
+      @apply inline-block;
+      /* display: initial; */
+    }
+}  
+
 fieldset{
     border: 1px solid #eee;
     margin-bottom: 1rem;

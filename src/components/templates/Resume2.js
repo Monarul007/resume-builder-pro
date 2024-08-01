@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import { formatDate, applyTextColor } from "../helpers";
+import { useFormContext, useWatch } from "react-hook-form";
 
-const Resume2 = ({ userData, numberOfPages }) => {
-    console.log(userData);
+const Resume2 = () => {
+
+    const numberOfPages = 2;
+    const { control } = useFormContext();
+    const userData = useWatch({ control });
+
     const [profilePhoto, setProfilePhoto] = useState(null);
     const [hobbies, setHobbies] = useState([]);
 
